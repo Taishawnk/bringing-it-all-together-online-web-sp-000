@@ -56,7 +56,7 @@ class Dog
   def self.find_or_create_by(hash)
     if hash[:id]
       self.find_by_id(hash[:id])
-     
+      # @@all.detect{|dog| dog.name == hash[:name] && dog.breed == hash[:breed]}
     else
       self.create(hash)
     end
